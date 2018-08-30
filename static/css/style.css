@@ -1,0 +1,44 @@
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.action{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 15px;
+}
+
+.button:active {
+    background-color: green;
+    transform: translateY(4px);
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.bloc_images {
+    text-align: center;
+    border: 3px solid green;
+}
+
+.classic_card {
+    max-width:208px;
+    max-height:296px;
+    width: auto;
+    height: auto;
+}

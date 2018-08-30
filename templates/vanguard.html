@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block header %}{% endblock %}
+{% block content %}
+    <div class="center" id="v_image">
+        <img src="{{ image_url }}" alt="{{ title }}">
+    </div>
+    <div class="center" id="main">
+        <div class="action" id="action">
+            <button id="generate" type="button" class="button" name="{{ title }}">Generate</button>
+        </div>
+            {% if title == "Jhoira of the Ghitu" %}
+        <div class="action" id="options">
+            <input type="radio" name="radio_type" value="instant" checked> Instant<br>
+            <input type="radio" name="radio_type" value="sorcery"> Sorcery<br>
+        </div>
+            {% endif %}
+    </div>
+    <br/>
+    <div id="image_list" class="bloc_images"></div>
+{% endblock %}
+{% block footer %}{% endblock %}
