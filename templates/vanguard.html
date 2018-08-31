@@ -2,9 +2,15 @@
 {% block header %}{% endblock %}
 {% block content %}
     <div class="center" id="v_image">
-        <img src="{{ image_url }}" alt="{{ title }}">
+        <img src="{{ image_url }}" alt="{{ title }}" id="vanguard_image">
     </div>
     <div class="center" id="main">
+            {% if title in ["Momir Vig, Simic Visionary Avatar", "Stonehewer Giant", "Maelstrom Archangel"] %}
+        <div id="cmc_div">
+            <p class="action">CMC =</p>
+            <input class="action" type="number" name="cmc" id="cmc_input" value="1" min="0">
+        </div>
+            {% endif %}
         <div class="action" id="action">
             <button id="generate" type="button" class="button" name="{{ title }}">Generate</button>
         </div>
@@ -14,6 +20,7 @@
             <input type="radio" name="radio_type" value="sorcery"> Sorcery<br>
         </div>
             {% endif %}
+        <div id="card_choice" class="center"></div>
     </div>
     <br/>
     <div id="image_list" class="bloc_images"></div>
